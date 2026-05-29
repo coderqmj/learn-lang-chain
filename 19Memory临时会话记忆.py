@@ -31,6 +31,12 @@ def get_history(session_id):
     return chat_history_store[session_id]
 
 
+# 创建带历史记忆的对话链
+# 第一个参数 base_chain：原始对话链（不带记忆），RunnableWithMessageHistory 会在其外层“包装”一层历史记忆能力。
+# 第二个参数 get_history：历史记录获取函数；接收 session_id，返回该会话对应的 ChatMessageHistory 实例；
+# RunnableWithMessageHistory 会在每次调用时通过它拿到当前会话的历史消息，并在调用后把新消息写回去，实现“记忆”。
+# input_messages_key="input"：指定输入字典里“用户当前输入”对应的 key（这里是 {"input": "..."}）。
+# history_messages_key="chat_history"：指定历史消息注入到提示词/链路时使用的 key（这里的 PromptTemplate 使用了 {chat_history} 占位符）。
 conversation_chain = RunnableWithMessageHistory(
     base_chain,
     get_history,
@@ -41,6 +47,7 @@ conversation_chain = RunnableWithMessageHistory(
 
 # 主程序入口：演示带历史记忆的对话链，连续提问并自动拼接上下文
 if __name__ == "__main__":
+    # 固定格式，就是这么写的
     session_config = {"configurable": {"session_id": "user_001"}}
     print(conversation_chain.invoke({"input": "小明有一只猫"}, session_config))
     print(conversation_chain.invoke({"input": "小刚有两只狗"}, session_config))

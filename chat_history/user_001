@@ -1,0 +1,77 @@
+[
+  {
+    "type": "human",
+    "data": {
+      "content": "小明有一只猫",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "小明有一只猫呀！那他一定很可爱。你知道这只猫叫什么名字吗？或者它是什么品种的？",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": null,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "小刚有两只狗",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "哦，原来小刚有两只狗呀！那一定很热闹呢！你知道它们叫什么名字吗？或者它们是什么品种的狗狗？",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": null,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  },
+  {
+    "type": "human",
+    "data": {
+      "content": "共有几只宠物？",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": null
+    }
+  },
+  {
+    "type": "ai",
+    "data": {
+      "content": "根据对话内容，小明有一只猫，小刚有两只狗，所以他们一共有：\n\n1（猫） + 2（狗） = **3只宠物**。",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": null,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  }
+]
